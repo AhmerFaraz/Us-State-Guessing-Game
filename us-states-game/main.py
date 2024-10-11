@@ -3,12 +3,12 @@ import pandas as pd
 
 screen = turtle.Screen()
 screen.title("US State Guessing Game")
-image = "Day-25/us-states-game/blank_states_img.gif"
+image = "us-states-game/blank_states_img.gif"
 turtle.addshape(image)
 
 turtle.shape(image)
 
-data_states = pd.read_csv("Day-25/us-states-game/50_states.csv")
+data_states = pd.read_csv("us-states-game/50_states.csv")
 all_states = data_states.state.to_list()
 guessed_state = []
 
@@ -30,7 +30,7 @@ while len(guessed_state) < 50:
         game_outcome_analysis = pd.DataFrame(states_to_learn)
         print(game_outcome_analysis)
 
-        game_outcome_analysis.to_csv("Day-25/us-states-game/Game_Outcome_Analysis.csv")
+        game_outcome_analysis.to_csv("us-states-game/Game_Outcome_Analysis.csv")
         break
 
 screen.exitonclick()
